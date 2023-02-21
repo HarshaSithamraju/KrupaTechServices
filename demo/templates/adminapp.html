@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'image/logo.png' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krupa Tech Services | Adminapp</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/adminapp.css'%}">
+    <script src="{% static 'js/fontawesome.js'%}" crossorigin="anonymous"></script>
+    
+    
+    <style>
+        #myTable{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 0px auto;
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 1250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #3F00FF;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th{
+  padding: 10px 20px;
+  text-align: center;
+}
+.styled-table tbody td {
+  max-width: 100px;
+  word-wrap: break-word;
+  padding: 10px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #3F00FF;
+}
+
+.styled-table tbody tr:hover{
+    
+    color: #3F00FF;
+} 
+
+.delete {
+  border: none;
+  outline: none;
+  background-color: rgb(50, 151, 50);
+  padding: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  transition: all ease 0.1s;
+  box-shadow: 0px 2px 0px 0px #0a0a0a;
+
+
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.delete:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #0000CD;
+}
+a, a:visited, a:hover, a:active {
+  color: white;
+}
+.tick{
+  padding: 2px;
+  /* height: 15px; */
+  border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="left-h" >
+            <img id="imgg" src="{% static 'image/logo.png' %}"/>
+            <p id="title"><b>Krupa Tech Services</b></p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+            <div id="link">
+                <b>
+                    <a style="color: gray;">Reapir Requets</a>
+                    <a  href="http://localhost:8000/feedback/" style="text-decoration: none;color: gray;">FeedBacks</a>
+                    
+                </b>
+            </div>
+        </div>
+       
+        
+    </header>
+
+    <br><br><br><br>
+    <!--Home Tab-->
+    <div>
+      <h4 class="message">Upto Date,Clients info who requested for thier device repairing....!</h4>
+        <form  method="POST" action="#">
+          {% csrf_token %}
+            <table  class="styled-table" id="myTable">
+                <thead align="center">
+                    <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col">Request ID</th>
+                         <th scope="col">Name</th>
+                         <th scope="col">Device</th>
+                         <th scope="col">Company</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Problem</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Address</th>
+                        <td scope="col"><b>Action</b></td>
+                    </tr>
+                </thead>
+                <tbody  align="center">
+                    {% for f in details %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{f.id}}</td>
+                        <td>{{f.Name}}</td>
+                        <td>{{f.Device}}</td>
+                        <td>{{f.Company}}</td>
+                        <td>{{f.Type}}</td>
+                        <td>{{f.Problem}}</td>
+                        <td>{{f.Phone}}</td>
+                        <td>{{f.Address}}</td>
+                        
+                         <td>
+                          <a href="/delete/{{ f.id }}" class="delete" style="text-decoration: none;" data-title="Delete" data-toggle="modal" data-target="#delete" >Repair Done<i class="fa fa-check tick" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                </tbody>
+            </table>
+            
+              
+            </form>
+    </div>
+    <!--BookReapir Tab-->
+  
+    
+    
+</body>
+
+<style>.dropbtn :hover{
+   
+  background-color: blue;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   right: 0%;
+   top:25px;
+  background-color: black;
+   min-width: 100px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: gray;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ .dropdown-content :hover{
+   color: blue;
+ }
+ .dropdown:hover .dropdown-content {
+   display: block;
+  
+ }
+ 
+</style>
+</html>
