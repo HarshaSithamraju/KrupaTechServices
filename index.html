@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'image/logo.png' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krupa Tech Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">  
+    <script src="{% static 'js/fontawesome.js' %}" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      alert("Krupa Tech Services,Kindly Request you to use Desktop View for better experiance..!");
+  
+      </script>
+    <!-- <script src="https://kit.fontawesome.com/9329adc263.js" crossorigin="anonymous"></script> -->
+    
+</head>
+<body>
+  <header>
+    <div class="left-h">
+      <img class="imgg" src="{% static 'image/logo.png' %}" />
+      <p class="title" style="font-size: 110%;color: white;"><b>Krupa Tech Services</b></p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="link">
+        <b>
+          <a href="http://localhost:8000/home/" style="text-decoration: none">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="http://localhost:8000/book/"  style="text-decoration: none">Book Reapir</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="http://localhost:8000/contact/" style="text-decoration: none">Contact Us</a>
+        </b>
+      </div>
+    </div>
+  </header>
+
+   <main>
+    <div style="width: 100%;">
+      <!-- <div class="banner-div" id="homebanner">
+        
+        <div id="banner-text">
+          <p class="bookquote">We're here !</p>
+          <p class="bookquote1">Get high quality repairs right away...</p>
+        </div>
+      </div> -->
+      <div class="banner-div" style=" transform: translateY(-13px);">
+        <img class="banner" src="{% static 'image/banner.jpg' %}" />
+        <div id="banner-text">
+          <p class="bookquote">We're here !</p>
+          <p class="bookquote1">Get high quality repairs right away...</p>
+        </div>
+      </div>
+      <br>
+      <h1 style="text-align: center;color:black;"><b>Our Services</b></h1>
+      <div class="ourservices">
+
+        <!-- rotating -->
+        <div class="circle-wrapper">
+          <div class="circle-img-div">
+            <img style="width: 300px;height:300px;position:relative;" src="{% static 'image/our-services-circle.png' %}" class="img-responsive" id="loading">
+            <img style="width: 270px;height:270px;position:absolute;" src="{% static 'image/technician.png' %}" class="person">
+          </div>
+        </div>
+        <!-- rotating -->
+    
+        <div class="services-images-div">
+          <div class="service-mini-div">
+            <img class="mobile" src="{% static 'image/mobilelogo.png' %}" />
+            <b class="mobiletitle">Mobile Servicing</b>
+          </div>
+          <div class="service-mini-div">
+            <img class="lappy" src="{% static 'image/lappylogo.png' %}" />
+            <b class="lappytitle">Laptop Servicing</b>
+          </div>
+          <div class="service-mini-div">
+            <img class="pc" src="{% static 'image/pclogo.png' %}" />
+            <b class="pctitle">Computer Servicing</b>
+          </div>
+          <div class="service-mini-div">
+            <img class="tv" src="{% static 'image/tvlogo.png' %}" />
+            <b class="tvtitle">Television Servicing</b>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="repairs">
+        <h1>REPAIRS WE PROVIDE</h1>
+      </div> 
+
+      <div class="mobilecontainer">
+
+          <div class="mobile-image">
+            <img class="mobilecard" src="{% static 'image/mobilecard.jpg' %}" />
+            <b class="mobilehead">Mobile Repairs</b>
+          </div>
+     
+          <div class="mobile-list">
+            <ul style="list-style-type:disc;">
+              <li><a>Apple,Vivo,Oppo,Samsung,Nokia and all other brands services available.</a></li>
+              <li><a>Genuine parts are available for replacement.</a></li>
+              <li><a>Your service will be completed in one day.</a></li>
+              <li><a>Your private information will be kept secure.</a></li>
+              <li><a>We had skilled technicians.</a></li>
+              <li><a>90 days warranty service will be provided.</a></li>
+            </ul>
+          </div>
+      
+      </div>
+      
+      <div class="mobilecontainer">
+   
+        <div class="lappy-list">
+          <ul>
+          <li><a >Hp,Dell,Lenovo,Acer,Asus and all other brands services available.</a></li>
+          <li><a >Genuine parts are provided for repair.</a></li>
+          <li><a >Service will be completed within a day.</a></li>
+          <li><a >Your confidential data will be secured</a></li>
+          <li><a >We had skilled technicians.</a></li>
+          <li><a >There will be 90 days of warranty support.</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-image">
+          <img class="mobilecard" src="{% static 'image/lappycard.jpg' %}"/>
+          <b class="lappyhead">Laptop Repairs</b>
+        </div>
+      </div>
+    
+
+      <div class="mobilecontainer">
+
+        <div class="mobile-image">
+          <img class="pccard" src="{% static 'image/pccard.jpg' %}" />
+          <b class="pchead">Computer Repairs</b>
+        </div>
+   
+        <div class="pc-list">
+          <ul>
+            <li><a>Hp,Dell,Lenovo,Acer,Zebronics and all other brands services available.</a></li>
+            <li><a>For repairs, genuine parts are provided.</a></li>
+            <li><a>Service will be completed within a single day.</a></li>
+            <li><a>Your private information will be kept secure.</a></li>
+            <li><a>We possess skilled technicians.</a></li>
+            <li><a>90 days warranty service will be provided</a></li>
+          </ul>
+        </div>
+    
+      </div>
+    
+      <div class="mobilecontainer">
+   
+        <div class="tv-list">
+          <ul>
+            <li><a>Lg,Samsung,Sony,Philips,Asus and all other brands services available.</a></li>
+            <li><a>Genuine parts are available for replacement.</a></li>
+            <li><a>Your service will be completed in one day.</a></li>
+            <li><a>We had skilled technicians.</a></li>
+            <li><a>There will be 90 days of warranty support.</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-image" style="margin-left:-20px;margin-top:-80px;">
+          <img class="mobilecard"  src="{% static 'image/tvcard.png' %}" />
+          <b class="mobilehead">TV Repairs</b>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+      <div id="aboutbanner">
+        <div style="transform: translateY(-170px);color: yellowgreen;font-weight: bold;font-size: 30px;margin-left: 170px;">
+          <p class="abouthead">Krupa Tech Services Is The Best Smart Devices Repairing Center..</p>
+          <br>
+        </div>
+    
+        <div class="aboutcontent"
+          style="color: white; width: 90%;margin-left: 60px;font-size: 14px;text-align: justify;transform: translateY(-230px);">
+          <p>Krupa Tech Services is the smart devices repair chain. We provide one-stop solution for all devices such as
+            mobile phones, tablets, laptops, desktops, and televisions. We service and repair all major brands such as
+            Apple, iPhone, OnePlus, Redmi, Mi, Oppo, Vivo, Xiaomi, Google Pixel, Samsung, and Realme Phone.</p>
+          <p>
+            We offer a wide range of mobile phone services such as online mobile repair,and mobile repair center. We also
+            have refurbished mobile stores where you can get branded phones for half the price with a 9-month service
+            warranty.If you have a Smartphone and a Laptop, which, in today's world, you almost certainly do, you have come
+            to the right place! Krupa Tech Services redefines the term "fixing" by making it more simple, effective,
+            efficient, and accessible to all mortals who thought having their phone or laptop repaired would be the worst
+            nightmare of their lives.
+          <p>
+            A mobile, laptop, computer, and television repair service is a must-have necessity for both individuals and
+            businesses who needs prompt and efficient repairs on their electronic devices. With our increasing reliance on
+            technology, having a reliable repair service provider can save time and stress in the event of a malfunction or
+            failure. The servicing technicians are highly and skilled in repairing a wide range of problems, from hardware
+            to software issues, and they only use high-quality components to guarantee long-lasting repairs. Furthermore,
+            the convenience of on-site repair services allows customers to get their devices back up and running pretty
+            fast, with minimal intervention to their daily routine</p>
+          <p>Furthermore, the service should prioritise customer convenience by providing mobile repair services, allowing
+            customers to have their devices repaired at their home or office. A quality mobile TV, laptop, and computer
+            repair service can help keep electronic devices running smoothly by emphasising quality, professionalism, and
+            customer service.</p>
+        </div>
+    
+      </div>
+    
+    </div>
+   
+  </main>
+  <br><br>
+  <footer>
+
+    <div class="footer-body">
+      
+      <div>
+        <div id="footer-logo-div">
+          <img class="logo" src="{%static 'image/logo.png' %}" />
+          <p class="head">Krupa Tech Services</p>
+        </div>
+        <p class="about">
+          Krupa Tech Services is the smart devices repair chain. We provide
+          one-stop solution for all devices such as mobile phones, tablets,
+          laptops, desktops, and televisions. We service and repair all major
+          brands such as Apple, iPhone, OnePlus, Redmi, Mi, Oppo, Vivo, Xiaomi,
+          Google Pixel, Samsung, and Realme Phone.
+        </p>
+      </div>
+
+      <div>
+        <p class="quick">
+          <b style="color: white">Quick Links</b><br />
+          <br />
+          <a href="/index.html"  style="text-decoration: none"><font >Home</font></a><br />
+          <a href="/book.html"  style="text-decoration: none"><font >Book Repair</font></a><br />
+        <a href="/contact.html"  style="text-decoration: none"><font >Contact us</font></a>
+        </p>
+      </div>
+
+      <div>
+        <p class="reach"><b style="color: white">Reach Us</b></p>
+        <p class="call">
+          <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;+91 89193 82914
+        </p>
+        <p class="insta">
+          <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;
+          _cyber_terrorist_
+        </p>
+        <p class="mail">
+          <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;routhugovindraju8830@gmail.com
+        </p>
+      </div>      
+
+    </div>
+
+    <div class="copyright">
+        <a href="/index.html" class="site">All Copy Rights Reserved © Krupa Tech Services</a>
+    </div>
+
+  </footer>
+
+</body>
+<style>
+
+  
+#homebanner{
+  /* margin-top: 100px; */
+  width: auto;
+
+  margin-top: 20px;
+  margin-left: -10px;
+  background-image: url("image/banner.jpg");
+  height: 100px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 10%;
+  padding-bottom: 15%;
+  box-shadow: 0 5px 25px rgba(0,0,0,.6);
+}
+
+#aboutbanner{
+/*   
+  width: 1900px; 
+  /* position: relative;
+  top: 2000px; */
+  width: auto; 
+  margin-left: -10px;
+  background-image: url("{%static 'image/aboutbg.jpg' %}");
+  height: 200px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+
+#aboutbanner:hover{
+  color: white;
+}
+</style>
+<!-- <style>
+
+#aboutbanner{
+  
+  width: 100vw;
+  position: relative;
+  top: 2000px;
+  margin-left: -10px;
+  background-image: url("image/aboutbg.jpg");
+  height: 200px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mobilecontainer, .mobilecontainer-fluid, .mobilecontainer-lg, .mobilecontainer-md, .mobilecontainer-sm, .mobilecontainer-xl, .mobilecontainer-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.dropbtn :hover{
+   
+  background-color: blue;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   right: 0%;
+   top:25px;
+  background-color: black;
+   min-width: 100px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: gray;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ .dropdown-content :hover{
+   color: blue;
+ }
+ .dropdown:hover .dropdown-content {
+   display: block;
+  
+ }
+
+
+ 
+</style> -->
+
+</html>
